@@ -4,12 +4,13 @@
   "description": "Nice and simple notifications for Electron apps",
   "main": "index.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hank Bao",
   "license": "MIT",
   "dependencies": {
-    "async": "^0.9.0",
+    "async": "^0.9.2",
     "lodash": "^2.4.1"
   },
   "repository": {
@@ -17,6 +18,7 @@
     "url": "https://github.com/hankbao/electron-notify"
   },
   "devDependencies": {
+    "electron": "^13.1.7",
     "eslint": "^0.21.2"
   }
 }

@@ -3,7 +3,8 @@
 const path = require('path')
 const async = require('async')
 const electron = require('electron')
-const BrowserWindow = electron.BrowserWindow
+const { app, BrowserWindow } = require('electron')
+//const BrowserWindow = electron.BrowserWindow
 const ipc = electron.ipcMain
 
 // One animation at a time
@@ -187,7 +188,9 @@ function setupConfig() {
   config.maxVisibleNotifications = config.maxVisibleNotifications > 7 ? 7 : config.maxVisibleNotifications
 }
 
-setupConfig()
+app.on('ready', () => {
+  setupConfig()   
+})
 
 // Array of windows with currently showing notifications
 let activeNotifications = []
